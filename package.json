@@ -2,6 +2,8 @@
   "name": "react-native-navigation",
   "version": "0.0.1",
   "description": "A simple navigation package for React Native.",
+  "license": "MIT",
+  "author": "Stuart Lee <stuart.lee@drpgroup.com>",
   "main": "index.js",
   "scripts": {
     "lint": "eslint src",
