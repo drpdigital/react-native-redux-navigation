@@ -1,5 +1,5 @@
 {
-  "name": "react-native-navigation",
+  "name": "react-native-redux-navigation",
   "version": "0.0.1",
   "description": "A simple navigation package for React Native.",
   "license": "MIT",
