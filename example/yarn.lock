@@ -4797,15 +4797,9 @@ react-native-maps@0.19.0:
   version "0.19.0"
   resolved "https://registry.yarnpkg.com/react-native-maps/-/react-native-maps-0.19.0.tgz#ce94fad1cf360e335cb4338a68c95f791e869074"
 
-react-native-navigation@drpdigital/react-native-redux-navigation:
+react-native-redux-navigation@drpdigital/react-native-redux-navigation#0.0.1:
   version "0.0.1"
-  resolved "https://codeload.github.com/drpdigital/react-native-redux-navigation/tar.gz/1aebbf1fa98c38207a06d55767b9fde0fa979cb3"
-  dependencies:
-    prop-types "^15.6.0"
-
-react-native-redux-navigation@drpdigital/react-native-redux-navigation:
-  version "0.0.1"
-  resolved "https://codeload.github.com/drpdigital/react-native-redux-navigation/tar.gz/491f1e052b758daf766669429e1955994ec44349"
+  resolved "https://codeload.github.com/drpdigital/react-native-redux-navigation/tar.gz/cfaa25881d250a8fd0e5b8e3dc22a8c5e9577b45"
   dependencies:
     prop-types "^15.6.0"
 
