@@ -7,7 +7,7 @@ Designed to work with redux.
 #### Installation
 
 ```
-yarn add drpdigital/react-native-navigation
+yarn add drpdigital/react-native-redux-navigation
 ```
 
 #### Usage
@@ -50,7 +50,7 @@ export connect(mapStateToProps, mapDispatchToProps)(App)
 
 ##### Navigator
 
- - `navigationState` - the current navigation state, probably pulled form the state in `mapStateToProps`
+ - `navigationState` - the current navigation state, usually pulled from the redux state in `mapStateToProps`
  - `router` a router, usually created using `createRouter` in `mapDispatchToProps`
  
  
