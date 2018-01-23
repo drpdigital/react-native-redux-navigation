@@ -1,0 +1,18 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "standard",
+    "plugin:react/recommended"
+  ],
+  "plugins": [
+    "import",
+    "react"
+  ],
+  "rules": {
+    "import/no-unresolved": 2,
+    "import/newline-after-import": 2,
+    "import/order": [2, {"groups": [["builtin", "external", "internal"], ["parent", "sibling"], "index"]}],
+    "no-console": [2, { "allow": ["warn", "error"] }],
+    "react/sort-prop-types": 2
+  }
+}
