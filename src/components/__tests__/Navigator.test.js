@@ -1,7 +1,8 @@
+/* eslint-env jest */
 import React from 'react'
 import renderer from 'react-test-renderer'
 import Navigator from '../Navigator'
-import createRouter from "../../util/createRouter"
+import createRouter from '../../util/createRouter'
 
 it('renders without crashing', () => {
   const resolve = () => ''
