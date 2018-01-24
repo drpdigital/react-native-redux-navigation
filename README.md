@@ -1,4 +1,8 @@
-### React Native Navigation
+# React Native Redux Navigation
+
+[![Build Status](https://travis-ci.org/drpdigital/react-native-redux-navigation.svg?branch=master)](https://travis-ci.org/drpdigital/react-native-redux-navigation)
+[![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://github.com/drpdigital/react-native-redux-navigation/blob/master/LICENSE)
+
 
 A simple navigation package, based loosely on the now deprecated NavigationExperimental components from React Native.
 
