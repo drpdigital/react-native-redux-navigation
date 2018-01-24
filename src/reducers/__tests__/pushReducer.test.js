@@ -1,6 +1,6 @@
 /* eslint-env jest */
 import reducer from '../pushReducer'
-import {pushAction} from "../../actions/pushAction"
+import { pushAction } from "../../actions/pushAction"
 
 describe('pushReducer', () => {
   const inputState = Object.freeze({
