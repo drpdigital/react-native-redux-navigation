@@ -114,10 +114,12 @@ class Navigator extends React.Component {
 }
 
 Navigator.propTypes = {
+  headerStyles: PropTypes.any,
   navigationState: NavigationPropTypes.navigationState.isRequired,
   onNavigationEvent: PropTypes.func,
   renderButton: PropTypes.oneOfType([ PropTypes.node, PropTypes.func ]),
-  router: NavigationPropTypes.router.isRequired
+  router: NavigationPropTypes.router.isRequired,
+  scene: NavigationPropTypes.scene
 }
 
 export default Navigator

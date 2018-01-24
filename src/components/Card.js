@@ -11,9 +11,9 @@ class Card extends React.PureComponent {
   static propTypes = {
     onComponentRef: PropTypes.func.isRequired,
     pointerEvents: PropTypes.string.isRequired,
-    renderScene: PropTypes.func.isRequired
-    // TODO work out what is going on with the opacity being passed in
-    // style: ViewPropTypes.style
+    renderScene: PropTypes.func.isRequired,
+    // TODO work out what is going on with the opacity being passed in and use PropTypes.style
+    style: PropTypes.any
   }
 
   render () {
