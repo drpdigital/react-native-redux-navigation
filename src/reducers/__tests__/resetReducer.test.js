@@ -1,6 +1,6 @@
 /* eslint-env jest */
 import reducer from '../resetReducer'
-import { resetAction } from "../../actions/resetAction"
+import { resetAction } from '../../actions/resetAction'
 
 describe('resetReducer', () => {
   const inputState = Object.freeze({
