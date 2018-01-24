@@ -14,7 +14,7 @@ const initialState = {
 export default function navigationStackReducer (state = initialState, action) {
   switch (action.type) {
     case PUSH: return pushReducer(state, action)
-    case POP: return popReducer(state, action)
+    case POP: return popReducer(state)
     case RESET: return resetReducer(state, action)
     default: return state
   }

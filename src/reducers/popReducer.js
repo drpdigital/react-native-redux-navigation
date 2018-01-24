@@ -1,5 +1,5 @@
-export default function pushReducer (state) {
-  if (state.index <= 0) return state
+export default function popReducer (state) {
+  if (state.routes.length <= 1) return state
   const routes = state.routes.slice(0, -1)
   return {
     ...state,
