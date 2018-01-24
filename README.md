@@ -1,6 +1,7 @@
 # React Native Redux Navigation
 
 [![Build Status](https://travis-ci.org/drpdigital/react-native-redux-navigation.svg?branch=master)](https://travis-ci.org/drpdigital/react-native-redux-navigation)
+[![Coverage Status](https://coveralls.io/repos/github/drpdigital/react-native-redux-navigation/badge.svg)](https://coveralls.io/github/drpdigital/react-native-redux-navigation)
 [![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://github.com/drpdigital/react-native-redux-navigation/blob/master/LICENSE)
 
 

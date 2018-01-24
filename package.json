@@ -7,19 +7,22 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint src",
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "jest": {
     "preset": "react-native",
     "coverageReporters": [
-      "json",
       "lcov",
+      "json",
       "text-summary"
     ],
     "collectCoverageFrom": [
       "src/**/*.js"
     ],
-    "testPathIgnorePatterns": ["<rootDir>/example", "node_modules"]
+    "testPathIgnorePatterns": [
+      "<rootDir>/example",
+      "node_modules"
+    ]
   },
   "peerDependencies": {
     "react": "*",
@@ -32,6 +35,7 @@
     "babel-eslint": "^8.1.2",
     "babel-jest": "^22.1.0",
     "babel-preset-react-native-stage-0": "^1.0.1",
+    "coveralls": "^3.0.0",
     "eslint": "^4.14.0",
     "eslint-config-standard": "^11.0.0-beta.0",
     "eslint-plugin-import": "^2.8.0",
