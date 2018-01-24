@@ -6,7 +6,7 @@ export const RESET = 'RESET'
  * @param route
  */
 export const resetAction = route => {
-  route = typeof route === 'string' ? { key: route, title: route } : route
+  route = typeof route === 'string' ? { key: route } : route
   return {
     type: RESET,
     payload: { route }
