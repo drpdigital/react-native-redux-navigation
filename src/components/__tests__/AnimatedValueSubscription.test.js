@@ -4,11 +4,13 @@ import AnimatedValueSubscription from '../AnimatedValueSubscription'
 describe('AnimatedValueSubscription', () => {
   it('adds listener', () => {
     const mockAnimatedValue = {
-      addListener: jest.fn(),
+      addListener: jest.fn(() => 'token'),
       removeListener: jest.fn()
     }
     const mockCallback = jest.fn()
-    new AnimatedValueSubscription(mockAnimatedValue, mockCallback)
+    const subscription = new AnimatedValueSubscription(mockAnimatedValue, mockCallback)
+    expect(subscription._token).toBe('token')
+    expect(subscription._value).toBe(mockAnimatedValue)
     expect(mockAnimatedValue.addListener).toBeCalledWith(mockCallback)
   })
 
