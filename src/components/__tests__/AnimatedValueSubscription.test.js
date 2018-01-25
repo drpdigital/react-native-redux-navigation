@@ -8,7 +8,7 @@ describe('AnimatedValueSubscription', () => {
       removeListener: jest.fn()
     }
     const mockCallback = jest.fn()
-    const subscription = new AnimatedValueSubscription(mockAnimatedValue, mockCallback)
+    new AnimatedValueSubscription(mockAnimatedValue, mockCallback)
     expect(mockAnimatedValue.addListener).toBeCalledWith(mockCallback)
   })
 
