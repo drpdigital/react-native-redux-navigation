@@ -9,3 +9,6 @@ npm-debug.log
 example/
 .eslintrc
 yarn.lock
+
+# source files
+src
