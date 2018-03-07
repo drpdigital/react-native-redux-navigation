@@ -52,7 +52,8 @@ class Navigator extends React.Component {
   }
 
   renderHeader = props => {
-    const { router, headerStyles, renderButton } = this.props
+    const { router, headerComponent, headerStyles, renderButton } = this.props
+    if (headerComponent === null) return null
     const { scene } = props
     const { route } = scene
     const key = scene.key + '_' + scene.index
