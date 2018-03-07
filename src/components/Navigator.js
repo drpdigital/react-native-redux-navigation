@@ -115,6 +115,7 @@ class Navigator extends React.Component {
 }
 
 Navigator.propTypes = {
+  headerComponent: PropTypes.any,
   headerStyles: PropTypes.any,
   navigationState: NavigationPropTypes.navigationState.isRequired,
   onNavigationEvent: PropTypes.func,
