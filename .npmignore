@@ -1,14 +1,9 @@
-# OSX
-.DS_Store
-
-# Node.js
-node_modules/
-npm-debug.log
-
-# Images and extras
+__mocks__
 example/
-.eslintrc
-yarn.lock
-
-# source files
+node_modules/
 src
+
+.eslintrc
+.babelrc
+.travis.yml
+yarn.lock

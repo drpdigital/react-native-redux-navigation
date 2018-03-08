@@ -1,14 +1,13 @@
 {
   "name": "react-native-redux-navigation",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A simple navigation package for React Native.",
   "license": "MIT",
   "author": "Stuart Lee <stuart.lee@drpgroup.com>",
-  "main": "dist/index.js",
+  "main": "index.js",
   "scripts": {
     "lint": "eslint src",
-    "test": "jest --coverage",
-    "build": "babel index.js --out-file dist/index.js"
+    "test": "jest --coverage"
   },
   "jest": {
     "preset": "react-native",
@@ -30,11 +29,10 @@
     "react-native": "*"
   },
   "dependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-react-native-stage-0": "^1.0.1",
     "prop-types": "^15.6.0"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-eslint": "^8.1.2",
     "babel-jest": "^22.1.0",
     "babel-preset-react-native-stage-0": "^1.0.1",
