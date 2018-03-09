@@ -1,5 +1,5 @@
-import createRouter from './createRouter'
 import navigationStackReducer from '../reducers/navigationStackReducer'
+import createRouter from './createRouter'
 
 /**
  * Create a router which emulates the standard redux router, but operates within the scope of a stateful component

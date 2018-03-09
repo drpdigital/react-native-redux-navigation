@@ -1,8 +1,8 @@
 import { PUSH } from '../actions/pushAction'
 import { POP } from '../actions/popAction'
+import { RESET } from '../actions/resetAction'
 import pushReducer from './pushReducer'
 import popReducer from './popReducer'
-import { RESET } from '../actions/resetAction'
 import resetReducer from './resetReducer'
 
 // default initial state

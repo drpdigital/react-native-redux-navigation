@@ -11,7 +11,8 @@
   "rules": {
     "import/no-unresolved": 2,
     "import/newline-after-import": 2,
-    "import/order": [2, {"groups": [["builtin", "external", "internal"], ["parent", "sibling"], "index"]}],
+    "padded-blocks": 0, // not decided on this one yet
+    "import/order": [2, {"groups": [["builtin", "external", "internal"], "parent", "sibling", "index"]}],
     "no-console": [2, { "allow": ["warn", "error"] }],
     "react/sort-prop-types": 2
   }
