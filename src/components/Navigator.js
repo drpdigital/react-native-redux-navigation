@@ -6,6 +6,15 @@ import Header from './Header'
 import NavigationPropTypes from './NavigationPropTypes'
 
 class Navigator extends React.Component {
+
+  static propTypes = {
+    screenProps: PropTypes.any
+  }
+
+  static defaultProps = {
+    screenProps: {}
+  }
+
   constructor (props) {
     super(props)
     this.eventHandlers = {}
@@ -84,7 +93,7 @@ class Navigator extends React.Component {
   }
 
   renderScene = props => {
-    const { router } = this.props
+    const { router, screenProps } = this.props
     const { scene } = props
     const { route } = scene
     const key = scene.key + '_' + scene.index
@@ -98,6 +107,7 @@ class Navigator extends React.Component {
       <Component
         navigation={navigation}
         {...route.props}
+        {...screenProps}
       />
     )
   }
