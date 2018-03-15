@@ -6,7 +6,7 @@ export default (dispatch, resolve) => {
   return {
     resolve,
     pop: () => dispatch(popAction()),
-    push: route => dispatch(pushAction(route)),
-    reset: route => dispatch(resetAction(route))
+    push: (route, params) => dispatch(pushAction(route, params)),
+    reset: (route, params) => dispatch(resetAction(route, params))
   }
 }

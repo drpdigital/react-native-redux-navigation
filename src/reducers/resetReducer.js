@@ -1,6 +1,6 @@
 export default function resetReducer (state, action) {
-  const { route } = action.payload
-  const routes = [{ ...route }]
+  const { key, params } = action.payload
+  const routes = [{ key, params }]
   return {
     ...state,
     index: routes.length - 1,

@@ -3,12 +3,12 @@ export const PUSH = 'PUSH'
 /**
  * Returns an FSA describing pushing a route to the stack
  * @returns {{type: string, payload: *}}
- * @param route
+ * @param key The route to push to
+ * @param params optional route parameters
  */
-export const pushAction = route => {
-  route = typeof route === 'string' ? { key: route } : route
+export const pushAction = (key, params) => {
   return {
     type: PUSH,
-    payload: { route }
+    payload: { key, params }
   }
 }

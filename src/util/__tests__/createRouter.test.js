@@ -35,10 +35,24 @@ describe('createRouter', () => {
     expect(mockDispatch).toHaveBeenCalledWith(action)
   })
 
+  it('dispatches push actions with params', () => {
+    const router = createRouter(mockDispatch, mockResolve)
+    const action = pushAction('foo', { bar: true })
+    router.push('foo', { bar: true })
+    expect(mockDispatch).toHaveBeenCalledWith(action)
+  })
+
   it('dispatches reset actions', () => {
     const router = createRouter(mockDispatch, mockResolve)
     const action = resetAction('foo')
     router.reset('foo')
+    expect(mockDispatch).toHaveBeenCalledWith(action)
+  })
+
+  it('dispatches reset actions with params', () => {
+    const router = createRouter(mockDispatch, mockResolve)
+    const action = resetAction('foo', { bar: true })
+    router.reset('foo', { bar: true })
     expect(mockDispatch).toHaveBeenCalledWith(action)
   })
 
