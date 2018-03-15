@@ -106,7 +106,7 @@ class Navigator extends React.Component {
     return (
       <Component
         navigation={navigation}
-        {...route.props}
+        {...route.params}
         {...screenProps}
       />
     )
