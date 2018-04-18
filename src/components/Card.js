@@ -1,5 +1,5 @@
 import React from 'react'
-import { Animated, StyleSheet, ViewPropTypes } from 'react-native'
+import { Animated, StyleSheet } from 'react-native'
 import PropTypes from 'prop-types'
 import { cardHorizontal } from '../styleInterpolation'
 import PointerEventsContainer from './PointerEventsContainer'
@@ -13,7 +13,8 @@ class Card extends React.PureComponent {
     onComponentRef: PropTypes.func.isRequired,
     pointerEvents: PropTypes.string.isRequired,
     renderScene: PropTypes.func.isRequired,
-    style: ViewPropTypes.style
+    // should be ViewPropTypes.style, but it's an animated view so that breaks
+    style: PropTypes.any
   }
 
   render () {
