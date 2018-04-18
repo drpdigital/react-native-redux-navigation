@@ -60,6 +60,12 @@ class Navigator extends React.Component {
     })
   }
 
+  getOption (navigationOptions, key, option) {
+    return this.state.config[key] && this.state.config[key][option]
+      ? this.state.config[key][option]
+      : navigationOptions[option]
+  }
+
   renderHeader = props => {
     const { router, headerComponent, headerStyles, renderButton } = this.props
     if (headerComponent === null) return null
@@ -68,15 +74,9 @@ class Navigator extends React.Component {
     const key = scene.key + '_' + scene.index
     const Component = router.resolve(route.key)
     const navigationOptions = Component.navigationOptions || {}
-    const title = this.state.config[key] && this.state.config[key].title
-      ? this.state.config[key].title
-      : navigationOptions.title || scene.route.key
-    const headerLeftButton = this.state.config[key] && this.state.config[key].headerLeftButton
-      ? this.state.config[key].headerLeftButton
-      : navigationOptions.headerLeftButton
-    const headerRightButton = this.state.config[key] && this.state.config[key].headerRightButton
-      ? this.state.config[key].headerRightButton
-      : navigationOptions.headerRightButton
+    const title = this.getOption(navigationOptions, key, 'title') || scene.route.key
+    const headerLeftButton = this.getOption(navigationOptions, key, 'headerLeftButton')
+    const headerRightButton = this.getOption(navigationOptions, key, 'headerRightButton')
     return (
       <Header
         {...props}
