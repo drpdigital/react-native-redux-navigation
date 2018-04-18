@@ -49,6 +49,17 @@ class CardStack extends React.Component {
   }
 
   _renderScene (props) {
+
+
+    const { scene, navigationState } = props
+    const { index } = scene
+    const offset = navigationState.index - index
+
+    // Scene is far away from the active scene. Hides it to avoid unnecessary rendering.
+    if (Math.abs(offset) > 1) return null
+
+    console.log(`rendering: ${props.scene.key}`)
+
     const style = cardHorizontal(props)
     return (
       <Card

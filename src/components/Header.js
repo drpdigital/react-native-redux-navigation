@@ -91,7 +91,7 @@ export default class Header extends React.PureComponent {
     const offset = navigationState.index - index
 
     // Scene is far away from the active scene. Hides it to avoid unnecessary rendering.
-    if (Math.abs(offset) > 2) return null
+    if (Math.abs(offset) > 1) return null
 
     const subViewProps = {...props, onNavigateBack: this.props.onNavigateBack}
     const subView = renderer(subViewProps)
