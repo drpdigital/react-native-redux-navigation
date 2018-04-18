@@ -6,7 +6,7 @@ import {
   ViewPropTypes
 } from 'react-native'
 import PropTypes from 'prop-types'
-import HeaderStyleInterpolator from './HeaderStyleInterpolator'
+import { headerLeft, headerRight, headerCenter } from '../styleInterpolation'
 import NavigationPropTypes from './NavigationPropTypes'
 import HeaderTitle from './HeaderTitle'
 import HeaderBackButton from './HeaderBackButton'
@@ -63,7 +63,7 @@ export default class Header extends React.PureComponent {
       props,
       LEFT,
       this.renderLeftComponent,
-      HeaderStyleInterpolator.forLeft
+      headerLeft
     )
   }
 
@@ -72,7 +72,7 @@ export default class Header extends React.PureComponent {
       props,
       'title',
       this.renderTitleComponent,
-      HeaderStyleInterpolator.forCenter
+      headerCenter
     )
   }
 
@@ -81,7 +81,7 @@ export default class Header extends React.PureComponent {
       props,
       RIGHT,
       this.renderRightComponent,
-      HeaderStyleInterpolator.forRight
+      headerRight
     )
   }
 

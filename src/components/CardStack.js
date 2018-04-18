@@ -1,9 +1,9 @@
 import React from 'react'
 import { NativeModules, StyleSheet, View } from 'react-native'
-import CardStackStyleInterpolator from './CardStackStyleInterpolator'
 import Card from './Card'
 import NavigationTransitioner from './NavigationTransitioner'
 import NavigationPropTypes from './NavigationPropTypes'
+import { cardHorizontal } from '../styleInterpolation'
 
 const NativeAnimatedModule = NativeModules.NativeAnimatedModule
 
@@ -49,8 +49,7 @@ class CardStack extends React.Component {
   }
 
   _renderScene (props) {
-    const interpolator = this.props.cardStyleInterpolator || CardStackStyleInterpolator.forHorizontal
-    const style = interpolator(props)
+    const style = cardHorizontal(props)
     return (
       <Card
         {...props}

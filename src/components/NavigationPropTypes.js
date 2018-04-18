@@ -93,15 +93,6 @@ const CardStack = {
   cardStyle: style,
 
   /**
-   * An interpolator function that is passed an object parameter
-   * and should return a style object to apply to
-   * the transitioning navigation card.
-   *
-   * Default interpolator transitions translateX, scale, and opacity.
-   */
-  cardStyleInterpolator: PropTypes.func,
-
-  /**
    * The controlled navigation state. Typically, the navigation state
    * look like this:
    *

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Animated, StyleSheet } from 'react-native'
 import PropTypes from 'prop-types'
-import CardStackStyleInterpolator from './CardStackStyleInterpolator'
+import { cardHorizontal } from '../styleInterpolation'
 import PointerEventsContainer from './PointerEventsContainer'
 
 /**
@@ -25,7 +25,7 @@ class Card extends React.PureComponent {
       ...props
     } = this.props
 
-    const viewStyle = style === undefined ? CardStackStyleInterpolator.forHorizontal(props) : style
+    const viewStyle = style === undefined ? cardHorizontal(props) : style
 
     return (
       <Animated.View
