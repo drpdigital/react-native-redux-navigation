@@ -3,7 +3,7 @@ import { Animated } from 'react-native'
 import PropTypes from 'prop-types'
 import invariant from 'invariant'
 import AnimatedValueSubscription from './AnimatedValueSubscription'
-import NavigationPropTypes from './NavigationPropTypes'
+import NavigationPropTypes from '../propTypes'
 
 const MIN_POSITION_OFFSET = 0.01
 

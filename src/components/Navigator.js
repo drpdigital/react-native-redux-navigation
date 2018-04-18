@@ -3,7 +3,7 @@ import { BackHandler } from 'react-native'
 import PropTypes from 'prop-types'
 import CardStack from './CardStack'
 import Header from './Header'
-import NavigationPropTypes from './NavigationPropTypes'
+import NavigationPropTypes from '../propTypes'
 
 class Navigator extends React.Component {
 

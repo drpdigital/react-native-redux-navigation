@@ -7,7 +7,7 @@ import {
 } from 'react-native'
 import PropTypes from 'prop-types'
 import { headerLeft, headerRight, headerCenter } from '../styleInterpolation'
-import NavigationPropTypes from './NavigationPropTypes'
+import NavigationPropTypes from '../propTypes'
 import HeaderTitle from './HeaderTitle'
 import HeaderBackButton from './HeaderBackButton'
 

@@ -1,11 +1,9 @@
 import React from 'react'
 import { NativeModules, StyleSheet, View } from 'react-native'
+import { cardHorizontal } from '../styleInterpolation'
 import Card from './Card'
 import NavigationTransitioner from './NavigationTransitioner'
-import NavigationPropTypes from './NavigationPropTypes'
-import { cardHorizontal } from '../styleInterpolation'
-
-const NativeAnimatedModule = NativeModules.NativeAnimatedModule
+import NavigationPropTypes from '../propTypes'
 
 /* eslint-disable react/require-default-props */
 class CardStack extends React.Component {
@@ -13,7 +11,7 @@ class CardStack extends React.Component {
 
   _configureTransition = () => {
     const animationConfig = {}
-    if (!!NativeAnimatedModule) {
+    if (NativeModules.NativeAnimatedModule) {
       animationConfig.useNativeDriver = true
     }
     return animationConfig
@@ -33,9 +31,7 @@ class CardStack extends React.Component {
 
     return (
       <View style={styles.container}>
-        <View
-          style={[styles.scenes, this.props.scenesStyle]}
-        >
+        <View style={[styles.scenes, this.props.scenesStyle]}>
           {scenes}
         </View>
         {header}
@@ -44,7 +40,6 @@ class CardStack extends React.Component {
   }
 
   _renderScene = (props) => {
-
     const { scene, navigationState } = props
     const { index } = scene
     const offset = navigationState.index - index
