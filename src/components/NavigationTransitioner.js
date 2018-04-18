@@ -3,7 +3,7 @@ import { Animated, Easing, StyleSheet, View, ViewPropTypes } from 'react-native'
 import invariant from 'invariant'
 import PropTypes from 'prop-types'
 import NavigationPropTypes from '../propTypes'
-import NavigationScenesReducer from './NavigationScenesReducer'
+import navigationScenesReducer from '../reducers/navigationScenesReducer'
 
 const DefaultTransitionSpec = {
   duration: 250,
@@ -39,7 +39,7 @@ export default class NavigationTransitioner extends React.Component {
       layout,
       position: new Animated.Value(this.props.navigationState.index),
       progress: new Animated.Value(1),
-      scenes: NavigationScenesReducer([], this.props.navigationState)
+      scenes: navigationScenesReducer([], this.props.navigationState)
     }
 
     this._prevTransitionProps = null
@@ -52,7 +52,7 @@ export default class NavigationTransitioner extends React.Component {
   }
 
   componentWillReceiveProps (nextProps) {
-    const nextScenes = NavigationScenesReducer(
+    const nextScenes = navigationScenesReducer(
       this.state.scenes,
       nextProps.navigationState,
       this.props.navigationState

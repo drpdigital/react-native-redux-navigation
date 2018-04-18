@@ -7,12 +7,8 @@ const shallowEqual = require('fbjs/lib/shallowEqual')
  */
 function compareKey (one, two) {
   const delta = one.length - two.length
-  if (delta > 0) {
-    return 1
-  }
-  if (delta < 0) {
-    return -1
-  }
+  if (delta > 0) return 1
+  if (delta < 0) return -1
   return one > two ? 1 : -1
 }
 
