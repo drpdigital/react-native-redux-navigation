@@ -1,9 +1,9 @@
 import React from 'react'
 import { Animated, Easing, StyleSheet, View, ViewPropTypes } from 'react-native'
-import PropTypes from 'prop-types'
 import invariant from 'invariant'
-import NavigationScenesReducer from './NavigationScenesReducer'
+import PropTypes from 'prop-types'
 import NavigationPropTypes from '../propTypes'
+import NavigationScenesReducer from './NavigationScenesReducer'
 
 const DefaultTransitionSpec = {
   duration: 250,

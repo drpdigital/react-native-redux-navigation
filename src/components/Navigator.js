@@ -1,9 +1,9 @@
 import React from 'react'
 import { BackHandler } from 'react-native'
 import PropTypes from 'prop-types'
+import NavigationPropTypes from '../propTypes'
 import CardStack from './CardStack'
 import Header from './Header'
-import NavigationPropTypes from '../propTypes'
 
 class Navigator extends React.Component {
 

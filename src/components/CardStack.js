@@ -1,9 +1,9 @@
 import React from 'react'
 import { NativeModules, StyleSheet, View } from 'react-native'
 import { cardHorizontal } from '../styleInterpolation'
+import NavigationPropTypes from '../propTypes'
 import Card from './Card'
 import NavigationTransitioner from './NavigationTransitioner'
-import NavigationPropTypes from '../propTypes'
 
 /* eslint-disable react/require-default-props */
 class CardStack extends React.Component {
