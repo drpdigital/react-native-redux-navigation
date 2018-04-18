@@ -102,15 +102,7 @@ function forVertical (props) {
   }
 }
 
-function canUseNativeDriver (isVertical) {
-  // The native driver can be enabled for this interpolator because the scale,
-  // translateX, and translateY transforms are supported with the native
-  // animation driver.
-  return true
-}
-
 export default {
   forHorizontal,
-  forVertical,
-  canUseNativeDriver
+  forVertical
 }

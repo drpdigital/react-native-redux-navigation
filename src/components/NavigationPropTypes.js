@@ -1,4 +1,4 @@
-import { Animated } from 'react-native'
+import { Animated, ViewPropTypes } from 'react-native'
 import PropTypes from 'prop-types'
 
 /* NavigationAction */
@@ -86,6 +86,65 @@ function extractSceneRendererProps (props) {
   }
 }
 
+const CardStack = {
+  /**
+   * Custom style applied to the card.
+   */
+  cardStyle: style,
+
+  /**
+   * An interpolator function that is passed an object parameter
+   * and should return a style object to apply to
+   * the transitioning navigation card.
+   *
+   * Default interpolator transitions translateX, scale, and opacity.
+   */
+  cardStyleInterpolator: PropTypes.func,
+
+  /**
+   * The controlled navigation state. Typically, the navigation state
+   * look like this:
+   *
+   * ```js
+   * const navigationState = {
+     *   index: 0, // the index of the selected route.
+     *   routes: [ // A list of routes.
+     *     {key: 'page 1'}, // The 1st route.
+     *     {key: 'page 2'}, // The second route.
+     *   ],
+     * }
+   * ```
+   */
+  navigationState: navigationState.isRequired,
+
+  /**
+   * Callback that is called when the "back" action is performed.
+   * This happens when the back button is pressed
+   */
+  onNavigateBack: PropTypes.func,
+
+  onTransitionEnd: PropTypes.func,
+
+  /**
+   * Function that renders the header.
+   */
+  renderHeader: PropTypes.func,
+
+  /**
+   * Function that renders the a scene for a route.
+   */
+  renderScene: PropTypes.func.isRequired,
+
+  /**
+   * Custom style applied to the scenes stack.
+   */
+  scenesStyle: ViewPropTypes.style,
+  /**
+   * Custom style applied to the cards stack.
+   */
+  style: ViewPropTypes.style
+}
+
 export default {
   action,
   extractSceneRendererProps,
@@ -94,6 +153,7 @@ export default {
   navigation,
   router,
   scene,
+  CardStack,
   SceneRendererProps,
   SceneRenderer,
   style
