@@ -11,11 +11,6 @@ const NativeAnimatedModule = NativeModules.NativeAnimatedModule
 class CardStack extends React.Component {
   static propTypes = NavigationPropTypes.CardStack
 
-  componentWillMount () {
-    this._render = this._render.bind(this)
-    this._renderScene = this._renderScene.bind(this)
-  }
-
   _configureTransition = () => {
     const animationConfig = {}
     if (!!NativeAnimatedModule) {
@@ -24,7 +19,7 @@ class CardStack extends React.Component {
     return animationConfig
   }
 
-  _render (props) {
+  _render = (props) => {
     const { renderHeader } = this.props
 
     const header = renderHeader ? <View>{renderHeader(props)}</View> : null
@@ -48,8 +43,7 @@ class CardStack extends React.Component {
     )
   }
 
-  _renderScene (props) {
-
+  _renderScene = (props) => {
 
     const { scene, navigationState } = props
     const { index } = scene

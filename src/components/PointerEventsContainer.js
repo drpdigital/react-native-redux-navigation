@@ -25,11 +25,6 @@ function create (Component) {
       this._pointerEvents = this._computePointerEvents()
     }
 
-    componentWillMount () {
-      this._onPositionChange = this._onPositionChange.bind(this)
-      this._onComponentRef = this._onComponentRef.bind(this)
-    }
-
     componentDidMount () {
       this._bindPosition(this.props)
     }
@@ -42,7 +37,7 @@ function create (Component) {
       this._positionListener && this._positionListener.remove()
     }
 
-    _onComponentRef (component) {
+    _onComponentRef = (component) => {
       this._component = component
       if (component) {
         invariant(
@@ -60,7 +55,7 @@ function create (Component) {
       )
     }
 
-    _onPositionChange () {
+    _onPositionChange = () => {
       if (this._component) {
         const pointerEvents = this._computePointerEvents()
         if (this._pointerEvents !== pointerEvents) {

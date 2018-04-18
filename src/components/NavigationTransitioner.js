@@ -47,11 +47,6 @@ export default class NavigationTransitioner extends React.Component {
     this._isMounted = false
   }
 
-  componentWillMount () {
-    this._onLayout = this._onLayout.bind(this)
-    this._onTransitionEnd = this._onTransitionEnd.bind(this)
-  }
-
   componentDidMount () {
     this._isMounted = true
   }
@@ -125,7 +120,7 @@ export default class NavigationTransitioner extends React.Component {
     this._isMounted = false
   }
 
-  _onLayout (event) {
+  _onLayout = (event) => {
     const {height, width} = event.nativeEvent.layout
     if (this.state.layout.initWidth === width &&
       this.state.layout.initHeight === height) {
@@ -150,7 +145,7 @@ export default class NavigationTransitioner extends React.Component {
     this.setState(nextState)
   }
 
-  _onTransitionEnd () {
+  _onTransitionEnd = () => {
     if (!this._isMounted) return
 
     const prevTransitionProps = this._prevTransitionProps
