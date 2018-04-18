@@ -20,7 +20,6 @@
       "src/**/*.js"
     ],
     "testPathIgnorePatterns": [
-      "<rootDir>/example",
       "node_modules"
     ]
   },
