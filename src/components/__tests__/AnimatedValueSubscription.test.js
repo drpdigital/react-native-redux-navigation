@@ -1,5 +1,5 @@
 /* eslint-env jest */
-import AnimatedValueSubscription from '../AnimatedValueSubscription'
+import AnimatedValueSubscription from '../../AnimatedValueSubscription'
 
 describe('AnimatedValueSubscription', () => {
   it('adds listener', () => {
