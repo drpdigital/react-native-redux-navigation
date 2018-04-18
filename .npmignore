@@ -1,8 +1,5 @@
 __mocks__
-example/
 node_modules/
-src
-
 .eslintrc
 .babelrc
 .travis.yml
