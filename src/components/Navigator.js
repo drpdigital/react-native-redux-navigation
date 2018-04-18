@@ -45,6 +45,7 @@ class Navigator extends React.Component {
     }
   }
 
+  // TODO handle multiple scenes trying to handle the same event
   setOnNavigationEvent = (key, fn) => {
     this.eventHandlers[key] = fn
   }
