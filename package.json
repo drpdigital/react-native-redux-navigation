@@ -1,6 +1,6 @@
 {
   "name": "react-native-redux-navigation",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "A simple navigation package for React Native.",
   "license": "MIT",
   "author": "Stuart Lee <stuart.lee@drpgroup.com>",
