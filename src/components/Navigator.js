@@ -68,7 +68,7 @@ class Navigator extends React.Component {
   }
 
   renderHeader = props => {
-    const { router, headerComponent, headerStyles, renderButton } = this.props
+    const { router, headerComponent, headerStyles, renderButton, statusBarHeight } = this.props
     if (headerComponent === null) return null
     const { scene } = props
     const { route } = scene
@@ -82,6 +82,7 @@ class Navigator extends React.Component {
       <Header
         {...props}
         title={title}
+        statusBarHeight={statusBarHeight}
         headerLeftButton={headerLeftButton}
         headerRightButton={headerRightButton}
         navigateBack={this.navigateBack}
